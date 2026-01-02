@@ -17,8 +17,8 @@ from langchain_core.documents import Document
 
 # Load Environment
 load_dotenv()
-
-if not os.getenv("GROQ_API_KEY"):
+api_key = st.secrets.get("GROQ_API_KEY") or os.getenv("GROQ_API_KEY")
+if not api_key:
     raise ValueError("GROQ_API_KEY not found.")
 
 
