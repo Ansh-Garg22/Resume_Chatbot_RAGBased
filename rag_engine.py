@@ -12,9 +12,9 @@ from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.documents import Document
 
 load_dotenv()
-
+api_key = st.secrets.get("GROQ_API_KEY") or os.getenv("GROQ_API_KEY")
 # Verify API Key
-if not os.getenv("GROQ_API_KEY"):
+if not api_key:
     raise ValueError("GROQ_API_KEY not found. Please check your .env file.")
 
 DB_PATH = "./db"
