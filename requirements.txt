@@ -3,6 +3,7 @@ uvicorn[standard]
 streamlit
 langchain>=0.0.300
 langchain-community
+langchain_huggingface
 chromadb>=0.3.27
 sentence-transformers>=2.2.2
 transformers>=4.30.0
